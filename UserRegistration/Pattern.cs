@@ -13,7 +13,7 @@ namespace UserRegistration
         const string LastName = "^[A-Z][a-zA-Z]{2,}$";
         const string Email = "^[a-zA-z]+[.+-_]{0,1}[a-z]+[@][a-zA-Z]+[.][a-z]{2,3}[.][a-z]{2}$";
         const string MobileNumber = "^[0-9]{2}[ ][1-9][0-9]{9}$";
-
+        const string PASSWORD_RULE1 = "^[a-zA-Z]{8,}$";
         public void ValidFirstName(string input)
         {
             if (Regex.IsMatch(input, FirstName))
@@ -42,6 +42,13 @@ namespace UserRegistration
                 Console.WriteLine("Your MobileNumber is  " + input);
             else
                 Console.WriteLine("Unvalid MobileNumber");
+        }
+        public void ValidPassword1(string input)
+        {
+            if (Regex.IsMatch(input, PASSWORD_RULE1))
+                Console.WriteLine("Your Password is Correct");
+            else
+                Console.WriteLine("Unvalid Password");
         }
 
     }
