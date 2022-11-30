@@ -8,7 +8,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select:-\n 1.First Name\n 2.LastName\n 3.Email \n 4.MobileNumber \n 5.PasswordRule1 \n 6.PasswordRule2 \n 7.PasswordRule3");
+                Console.WriteLine("Select:-\n 1.First Name\n 2.LastName\n 3.Email \n 4.MobileNumber \n 5.PasswordRule1 \n 6.PasswordRule2 \n 7.PasswordRule3 \n 8. PasswordRule4");
                 int choice = Convert.ToInt32(Console.ReadLine());
 
                 switch (choice)
@@ -47,6 +47,11 @@
                         Console.WriteLine("Enter your Password");
                         string PASSWORD_RULE3 = Console.ReadLine();
                         pattern.ValidPassword3(PASSWORD_RULE3);
+                        break;
+                    case 8:
+                        Console.WriteLine("Enter your Password");
+                        string PASSWORD_RULE4 = Console.ReadLine();
+                        pattern.ValidPassword4(PASSWORD_RULE4);
                         break;
 
                     default:

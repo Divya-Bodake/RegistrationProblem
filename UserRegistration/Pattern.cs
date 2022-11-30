@@ -16,6 +16,7 @@ namespace UserRegistration
         const string PASSWORD_RULE1 = "^[a-zA-Z]{8,}$";
         const string PASSWORD_RULE2 = "[A-Z][a-zA-Z]{7,}$";
         const string PASSWORD_RULE3 = "^(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9]{8,}$";
+        const string PASSWORD_RULE4 = "^(?=.*[!@#$%_])(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9!@#_$%]{8,}$";
 
         public void ValidFirstName(string input)
         {
@@ -63,6 +64,13 @@ namespace UserRegistration
         public void ValidPassword3(string input)
         {
             if (Regex.IsMatch(input, PASSWORD_RULE3))
+                Console.WriteLine("Your Password is Correct");
+            else
+                Console.WriteLine("Unvalid Password");
+        }
+        public void ValidPassword4(string input)
+        {
+            if (Regex.IsMatch(input, PASSWORD_RULE4))
                 Console.WriteLine("Your Password is Correct");
             else
                 Console.WriteLine("Unvalid Password");
