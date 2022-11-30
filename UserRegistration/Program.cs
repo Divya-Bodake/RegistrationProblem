@@ -8,7 +8,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select:-\n 1.First Name\n 2.LastName\n 3.Email ");
+                Console.WriteLine("Select:-\n 1.First Name\n 2.LastName\n 3.Email \n 4.MobileNumber ");
                 int choice = Convert.ToInt32(Console.ReadLine());
 
                 switch (choice)
@@ -28,8 +28,12 @@
                         string Email = Console.ReadLine();
                         pattern.ValidEmail(Email);
                         break;
+                    case 4:
+                        Console.WriteLine("Enter your Mobile Number");
+                        string MobileNumber = Console.ReadLine();
+                        pattern.ValidMobileNum(MobileNumber);
+                        break;
 
-                   
                     default:
                         flag = false;
                         break;
