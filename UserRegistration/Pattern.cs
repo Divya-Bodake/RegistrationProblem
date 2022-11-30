@@ -11,6 +11,7 @@ namespace UserRegistration
     {
         const string FirstName = "^[A-Z][a-zA-Z]{2,}$";
         const string LastName = "^[A-Z][a-zA-Z]{2,}$";
+        const string Email = "^[a-zA-z]+[.+-_]{0,1}[a-z]+[@][a-zA-Z]+[.][a-z]{2,3}[.][a-z]{2}$";
 
         public void ValidFirstName(string input)
         {
@@ -26,5 +27,14 @@ namespace UserRegistration
             else
                 Console.WriteLine("Unvalid LastName");
         }
+
+        public void ValidEmail(string input)
+        {
+            if (Regex.IsMatch(input, Email))
+                Console.WriteLine("Your Email is  " + input);
+            else
+                Console.WriteLine("Unvalid Email");
+        }
+       
     }
 }
