@@ -15,6 +15,7 @@ namespace UserRegistration
         const string MobileNumber = "^[0-9]{2}[ ][1-9][0-9]{9}$";
         const string PASSWORD_RULE1 = "^[a-zA-Z]{8,}$";
         const string PASSWORD_RULE2 = "[A-Z][a-zA-Z]{7,}$";
+        const string PASSWORD_RULE3 = "^(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9]{8,}$";
 
         public void ValidFirstName(string input)
         {
@@ -55,6 +56,13 @@ namespace UserRegistration
         public void ValidPassword2(string input)
         {
             if (Regex.IsMatch(input, PASSWORD_RULE2))
+                Console.WriteLine("Your Password is Correct");
+            else
+                Console.WriteLine("Unvalid Password");
+        }
+        public void ValidPassword3(string input)
+        {
+            if (Regex.IsMatch(input, PASSWORD_RULE3))
                 Console.WriteLine("Your Password is Correct");
             else
                 Console.WriteLine("Unvalid Password");
